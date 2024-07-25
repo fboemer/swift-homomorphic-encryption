@@ -1,7 +1,7 @@
 ---
 layout: post
-published: false
-date: 2024-07-30 14:00:00
+published: true
+date: 2024-07-30 10:00:00
 title: Announcing Swift Homomorphic Encryption
 author: [fabian-boemer, karl-tarbe, rehan-rishi]
 ---
@@ -18,7 +18,7 @@ that the client can decrypt. During the execution of the request, the server
 itself never decrypts the original data or even has access to the decryption
 key. Such an approach presents new opportunities for cloud services to operate
 while protecting the privacy and security of a user's data, which is obviously
-highly attractive for many scenarios. 
+highly attractive for many scenarios.
 
 At Apple, we’re using homomorphic encryption in our own work, including in
 Private Cloud Compute; we're therefore delighted to share this Swift
@@ -64,9 +64,9 @@ A typical workflow for homomorphic encryption might be as follows:
 The Swift implementation of homomorphic encryption implements the
 Brakerski-Fan-Vercauteren (BFV) HE scheme
 ([https://eprint.iacr.org/2012/078.pdf](https://eprint.iacr.org/2012/078.pdf),
-[https://eprint.iacr.org/2012/144](https://eprint.iacr.org/2012/078.pdf)). BFV
+[https://eprint.iacr.org/2012/144](https://eprint.iacr.org/2012/144)). BFV
 is based on the ring learning with errors (RLWE) hardness problem, which is
-quantum resistant. 
+quantum resistant.
 
 In line with Apple’s [transition](https://security.apple.com/blog/imessage-pq3/)
 to post-quantum security, the Live Caller ID feature requires BFV parameters
