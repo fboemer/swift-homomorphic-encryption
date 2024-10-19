@@ -3,7 +3,9 @@ name: Pull request
 on:
   pull_request:
     types: [opened, reopened, synchronize]
-
+  workflow_call:
+    inputs:
+      prebuild_command: "apt install jemalloc"
 
 
 jobs:
