@@ -217,61 +217,61 @@ let package = Package(
 
 // MARK: - Benchmarks
 
-package.dependencies += [
-    .package(url: "https://github.com/ordo-one/package-benchmark", .upToNextMajor(from: "1.4.0")),
-]
-package.targets += [
-    .executableTarget(
-        name: "PolyBenchmark",
-        dependencies: [
-            .product(name: "Benchmark", package: "package-benchmark"),
-            "HomomorphicEncryption",
-        ],
-        path: "Benchmarks/PolyBenchmark",
-        swiftSettings: benchmarkSettings,
-        plugins: [
-            .plugin(name: "BenchmarkPlugin", package: "package-benchmark"),
-        ]),
-    .executableTarget(
-        name: "RlweBenchmark",
-        dependencies: [
-            .product(name: "Benchmark", package: "package-benchmark"),
-            "HomomorphicEncryption",
-        ],
-        path: "Benchmarks/RlweBenchmark",
-        swiftSettings: benchmarkSettings,
-        plugins: [
-            .plugin(name: "BenchmarkPlugin", package: "package-benchmark"),
-        ]),
-    .executableTarget(
-        name: "PIRBenchmark",
-        dependencies: [
-            .product(name: "Benchmark", package: "package-benchmark"),
-            "HomomorphicEncryption",
-            "HomomorphicEncryptionProtobuf",
-            "PrivateInformationRetrieval",
-            "PrivateInformationRetrievalProtobuf",
-        ],
-        path: "Benchmarks/PrivateInformationRetrievalBenchmark",
-        swiftSettings: benchmarkSettings,
-        plugins: [
-            .plugin(name: "BenchmarkPlugin", package: "package-benchmark"),
-        ]),
-    .executableTarget(
-        name: "PNNSBenchmark",
-        dependencies: [
-            .product(name: "Benchmark", package: "package-benchmark"),
-            "HomomorphicEncryption",
-            "HomomorphicEncryptionProtobuf",
-            "PrivateNearestNeighborSearch",
-            "PrivateNearestNeighborSearchProtobuf",
-        ],
-        path: "Benchmarks/PrivateNearestNeighborSearchBenchmark",
-        swiftSettings: benchmarkSettings,
-        plugins: [
-            .plugin(name: "BenchmarkPlugin", package: "package-benchmark"),
-        ]),
-]
+//package.dependencies += [
+//    .package(url: "https://github.com/ordo-one/package-benchmark", .upToNextMajor(from: "1.4.0")),
+//]
+//package.targets += [
+//    .executableTarget(
+//        name: "PolyBenchmark",
+//        dependencies: [
+//            .product(name: "Benchmark", package: "package-benchmark"),
+//            "HomomorphicEncryption",
+//        ],
+//        path: "Benchmarks/PolyBenchmark",
+//        swiftSettings: benchmarkSettings,
+//        plugins: [
+//            .plugin(name: "BenchmarkPlugin", package: "package-benchmark"),
+//        ]),
+//    .executableTarget(
+//        name: "RlweBenchmark",
+//        dependencies: [
+//            .product(name: "Benchmark", package: "package-benchmark"),
+//            "HomomorphicEncryption",
+//        ],
+//        path: "Benchmarks/RlweBenchmark",
+//        swiftSettings: benchmarkSettings,
+//        plugins: [
+//            .plugin(name: "BenchmarkPlugin", package: "package-benchmark"),
+//        ]),
+//    .executableTarget(
+//        name: "PIRBenchmark",
+//        dependencies: [
+//            .product(name: "Benchmark", package: "package-benchmark"),
+//            "HomomorphicEncryption",
+//            "HomomorphicEncryptionProtobuf",
+//            "PrivateInformationRetrieval",
+//            "PrivateInformationRetrievalProtobuf",
+//        ],
+//        path: "Benchmarks/PrivateInformationRetrievalBenchmark",
+//        swiftSettings: benchmarkSettings,
+//        plugins: [
+//            .plugin(name: "BenchmarkPlugin", package: "package-benchmark"),
+//        ]),
+//    .executableTarget(
+//        name: "PNNSBenchmark",
+//        dependencies: [
+//            .product(name: "Benchmark", package: "package-benchmark"),
+//            "HomomorphicEncryption",
+//            "HomomorphicEncryptionProtobuf",
+//            "PrivateNearestNeighborSearch",
+//            "PrivateNearestNeighborSearchProtobuf",
+//        ],
+//        path: "Benchmarks/PrivateNearestNeighborSearchBenchmark",
+//        swiftSettings: benchmarkSettings,
+//        plugins: [
+//            .plugin(name: "BenchmarkPlugin", package: "package-benchmark"),
+//        ]),
+//]
 
 // Set the minimum macOS version for the package
 package.platforms = [
