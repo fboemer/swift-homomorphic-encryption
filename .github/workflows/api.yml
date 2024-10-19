@@ -3,10 +3,6 @@ name: Pull request
 on:
   pull_request:
     types: [opened, reopened, synchronize]
-  workflow_call:
-    inputs:
-      prebuild_command: "apt install jemalloc"
-
 
 jobs:
   soundness:
@@ -15,4 +11,5 @@ jobs:
     with:
       license_header_check_project_name: "Swift.org"
       python_lint_check_enabled: false
+      prebuild_command: "apt -y install jemalloc"
 
